@@ -49,7 +49,7 @@ def ml_trigger_func(azeventhub: func.EventHubEvent):
         response_opt_json = None
 
     #lets store everything in a table
-    connection_string = "DefaultEndpointsProtocol=https;AccountName=mloilandgas5917582980;AccountKey=fXFPz9+WXGXjd//vfpo0hNPtek0Oxle9KyNttetoTfgKaEqAqnwj9hyfpkRwlifGk55o7AYVIZ6S+AStAJTRAQ==;EndpointSuffix=core.windows.net"
+    connection_string = ""
     table_service = TableServiceClient.from_connection_string(conn_str=connection_string)
     table_client = table_service.get_table_client(table_name="finaldata")
     partition_key = datetime.now().strftime("%Y-%m-%d")  # e.g., "2024-01-15"

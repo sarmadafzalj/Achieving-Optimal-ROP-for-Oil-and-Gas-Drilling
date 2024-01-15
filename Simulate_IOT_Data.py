@@ -9,7 +9,7 @@ data = pd.read_csv('Data/Data_for_ROP_optimization.csv')
 data = data.head()
 
 # Azure IoT hub connection string
-connection_string = 'HostName=oilandgas.azure-devices.net;DeviceId=drilling101;SharedAccessKey=DocYkrKasjRXv+P2RYScTLG6t7hhd1h+PAIoTKaFAFw='
+connection_string = ''
 client = IoTHubDeviceClient.create_from_connection_string(connection_string)
 
 # Function to send data to IoT hub
